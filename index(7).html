@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Promo Video</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f4f6;
+      padding: 40px;
+      color: #333;
+    }
+    .video-wrapper {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    }
+    video {
+      width: 100%;
+      border-radius: 8px;
+      outline: none;
+    }
+    #readyMessage {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1a73e8;
+    }
+    form {
+      margin-top: 30px;
+    }
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      padding: 12px 20px;
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #155ec3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="video-wrapper">
+  <h2>You're Invited: Watch Our Event Promo</h2>
+  <video id="promoVideo" controls oncanplay="showReadyMessage()">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div id="readyMessage"></div>
+
+  <form id="exitWarningForm">
+    <input type="text" id="name" placeholder="Your Name">
+    <textarea id="message" rows="4" placeholder="Any message for us?"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+  function showReadyMessage() {
+    document.getElementById('readyMessage').innerText = 'Video ready to play!';
+  }
+
+  let isFormTouched = false;
+  document.getElementById('exitWarningForm').addEventListener('input', function() {
+    isFormTouched = true;
+  });
+
+  window.onbeforeunload = function () {
+    if (isFormTouched) {
+      return "You have unsaved changes. Are you sure you want to leave?";
+    }
+  };
+</script>
+
+</body>
+</html>

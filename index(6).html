@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Feedback</title>
+  <style>
+    body {
+      background: #f4f6f8;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      color: #333;
+    }
+    .feedback-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #fee {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #1a73e8;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #1a73e8;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #155ec3;
+    }
+    #eventImage {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    #charCount {
+      font-size: 13px;
+      color: #888;
+    }
+    #confirmation {
+      text-align: center;
+      font-weight: bold;
+      color: green;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="feedback-container">
+  <form onsubmit="event.preventDefault(); document.getElementById('confirmation').innerText = 'Thanks for your feedback! 🎉';">
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" placeholder="Enter 10-digit phone number" onblur="validatePhone()">
+
+    <label for="eventSelect">Choose an Event</label>
+    <select id="eventSelect" onchange="showFee()">
+      <option value="">--Select--</option>
+      <option value="music">Music Concert - ₹500</option>
+      <option value="tech">Tech Meetup - ₹300</option>
+      <option value="art">Art Fair - ₹200</option>
+    </select>
+    <div id="fee"></div>
+
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" rows="5" onkeyup="countChars()"></textarea>
+    <div id="charCount">0 characters</div>
+
+    <button type="submit" onclick="displayThanks()">Submit Feedback</button>
+    <div id="confirmation"></div>
+
+    <img id="eventImage" src="https://via.placeholder.com/500x250?text=Event+Poster" ondblclick="enlargeImage()" title="Double-click to enlarge">
+  </form>
+</div>
+
+<script>
+  function validatePhone() {
+    const phone = document.getElementById('phone').value;
+    if (!/^\d{10}$/.test(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+    }
+  }
+
+  function showFee() {
+    const event = document.getElementById('eventSelect').value;
+    let fee = '';
+    if (event === 'music') fee = 'Fee: ₹500';
+    else if (event === 'tech') fee = 'Fee: ₹300';
+    else if (event === 'art') fee = 'Fee: ₹200';
+    document.getElementById('fee').innerText = fee;
+  }
+
+  function displayThanks() {
+    document.getElementById('confirmation').innerText = 'Thanks for your feedback! 🎉';
+  }
+
+  function enlargeImage() {
+    const img = document.getElementById('eventImage');
+    img.style.transform = img.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)';
+  }
+
+  function countChars() {
+    const feedback = document.getElementById('feedback').value;
+    document.getElementById('charCount').innerText = `${feedback.length} characters`;
+  }
+</script>
+
+</body>
+</html>

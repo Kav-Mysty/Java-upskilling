@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Preferences</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #eef1f5;
+      padding: 50px;
+      color: #333;
+    }
+    .preferences-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+    label {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #ff7043;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .btn:hover {
+      background-color: #e35b30;
+    }
+    #confirmation {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+<div class="preferences-container">
+  <h2>Choose Your Preferred Event Type</h2>
+  
+  <label for="eventType">Event Type</label>
+  <select id="eventType">
+    <option value="">-- Select --</option>
+    <option value="music">Music Concert</option>
+    <option value="tech">Tech Workshop</option>
+    <option value="sports">Sports Meet</option>
+    <option value="art">Art & Culture</option>
+  </select>
+
+  <button class="btn" onclick="savePreference()">Save Preference</button>
+  <button class="btn" onclick="clearPreferences()">Clear Preferences</button>
+
+  <div id="confirmation"></div>
+</div>
+
+<script>
+  const selectElement = document.getElementById('eventType');
+  const confirmation = document.getElementById('confirmation');
+
+  window.onload = function() {
+    const savedType = localStorage.getItem('preferredEvent');
+    if (savedType) {
+      selectElement.value = savedType;
+      confirmation.textContent = `Welcome back! We’ve pre-selected your preference: ${savedType}`;
+    }
+  };
+
+  function savePreference() {
+    const selected = selectElement.value;
+    if (selected) {
+      localStorage.setItem('preferredEvent', selected);
+      sessionStorage.setItem('sessionPref', selected);
+      confirmation.textContent = `Preference "${selected}" saved successfully.`;
+    } else {
+      confirmation.textContent = 'Please choose a valid event type.';
+    }
+  }
+
+  function clearPreferences() {
+    localStorage.removeItem('preferredEvent');
+    sessionStorage.clear();
+    selectElement.value = '';
+    confirmation.textContent = 'All preferences cleared.';
+  }
+</script>
+
+</body>
+</html>

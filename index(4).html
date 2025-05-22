@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Gallery</title>
+  <style>
+    body {
+      background: #f2f4f5;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 20px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 20px;
+      text-align: center;
+    }
+    .gallery-img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border: 5px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+      border-color: #1976d2;
+    }
+    caption {
+      caption-side: top;
+      font-size: 28px;
+      color: #1976d2;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>Memories from Last Year’s Events</caption>
+    <tr>
+      <td><img src="images/musicfest.jpg" alt="Music Fest" title="Annual Music Festival" class="gallery-img"></td>
+      <td><img src="images/artfair.jpg" alt="Art Fair" title="Community Art Fair" class="gallery-img"></td>
+      <td><img src="images/youthcamp.jpg" alt="Youth Camp" title="Youth Summer Camp" class="gallery-img"></td>
+    </tr>
+    <tr>
+      <td><img src="images/cleanup.jpg" alt="Beach Cleanup" title="Beach Cleanup Drive" class="gallery-img"></td>
+      <td><img src="images/fooddrive.jpg" alt="Food Drive" title="Local Food Donation Event" class="gallery-img"></td>
+      <td><img src="images/lightsfest.jpg" alt="Lights Festival" title="Festival of Lights Celebration" class="gallery-img"></td>
+    </tr>
+  </table>
+
+</body>
+</html>
