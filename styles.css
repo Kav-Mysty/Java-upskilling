@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f0f8ff url('https://www.transparenttextures.com/patterns/graphy.png');
+  background-blend-mode: lighten;
+  padding: 20px;
+  color: #333;
+}
+
+#mainHeader {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navList li a:hover {
+  text-decoration: underline;
+  color: #ff0;
+}
+
+.eventSection {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.eventCard {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.eventCard:hover {
+  transform: scale(1.05);
+}
+
+.eventDesc {
+  font-size: 15px;
+  text-align: justify;
+  text-transform: capitalize;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+.eventTableSection {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.eventTable {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.eventTable th, .eventTable td {
+  padding: 12px 15px;
+  border: 1px solid #888;
+  background-color: rgba(240, 248, 255, 0.9);
+}
+
+.eventTable tr:nth-child(even) {
+  background-color: #e0f7fa;
+}
+
+.registerForm {
+  margin: 40px auto;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+}
+
+.registerForm input, .registerForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.registerForm input:focus, .registerForm select:focus {
+  border-color: #007bff;
+  outline: 2px solid #007bff33;
+}
+
+.registerForm button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registerForm button:hover {
+  background-color: #0056b3;
+}
+
+.newsBulletin {
+  margin: 50px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .navList {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .eventSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columns {
+    column-count: 1;
+  }
+
+  .eventTable {
+    width: 100%;
+  }
+
+  .registerForm {
+    width: 90%;
+  }
+}

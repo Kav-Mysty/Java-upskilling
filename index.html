@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bootstrap 5 with Sass Setup</title>
-<link rel="stylesheet" href="style.css" />
+  <title>Community Event Portal</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h1>Welcome to Bootstrap 5 with Sass</h1>
+<body onload="alert('Page is loaded!')">
+  <h1 style="color: red;">Welcome to the Community Portal</h1>
+  <h2 id="mainHeader">Upcoming Events</h2>
+  <div class="eventCard">
+    <h3>Music Night</h3>
+    <p>Enjoy live music in your city!</p>
+  </div>
 </body>
 </html>
