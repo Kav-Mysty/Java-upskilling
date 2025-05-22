@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+body {
+  background: #fff0f0;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 3rem;
+}
+
+h1 {
+  color: $primary;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grid System Showcase</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    .box {
+      background: #fff0f6;
+      border: 2px dashed #e91e63;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .box:hover {
+      transform: scale(1.05);
+      background: #fce4ec;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box"><i class="bi bi-broadcast-pin"></i> Box A</div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box"><i class="bi bi-cloud-sun"></i> Box B</div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box"><i class="bi bi-bezier"></i> Box C</div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="box"><i class="bi bi-cast"></i> Box D</div>
+      </div>
+    </div>
+  </div>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

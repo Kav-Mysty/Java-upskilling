@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Button Groups & Toggle</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body {
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .btn-group-toggle .btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  .btn-group-toggle .btn:hover {
+    filter: brightness(0.9);
+  }
+</style>
+</head>
+<body>
+  <div class="btn-group btn-group-toggle" data-bs-toggle="buttons">
+    <label class="btn btn-outline-primary active">
+      <input type="checkbox" checked autocomplete="off" /> Option 1
+    </label>
+    <label class="btn btn-outline-success">
+      <input type="checkbox" autocomplete="off" /> Option 2
+    </label>
+    <label class="btn btn-outline-danger">
+      <input type="checkbox" autocomplete="off" /> Option 3
+    </label>
+    <label class="btn btn-outline-warning">
+      <input type="checkbox" autocomplete="off" /> Option 4
+    </label>
+  </div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

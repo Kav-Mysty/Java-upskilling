@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shadowed Rounded Pill Card</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .card {
+    width: 320px;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  }
+  .card-body {
+    padding: 2rem;
+  }
+  .card-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .card-text {
+    color: #555;
+    font-size: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="card shadow-lg rounded-pill">
+  <div class="card-body text-center">
+    <h5 class="card-title">Elegant Card</h5>
+    <p class="card-text">A smooth rounded-pill card with a deep shadow effect for a modern look.</p>
+  </div>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

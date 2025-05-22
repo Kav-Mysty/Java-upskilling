@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Folder Structure</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+    .folder {
+      font-size: 1.25rem;
+      color: #0d6efd;
+    }
+    .file {
+      font-size: 1rem;
+      margin-left: 1.5rem;
+    }
+    .card {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center text-primary mb-4">
+      <i class="bi bi-folder-symlink-fill me-2"></i>Bootstrap Directory Overview
+    </h2>
+
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="folder"><i class="bi bi-folder-fill me-2"></i>bootstrap/</div>
+        <div class="file text-success"><i class="bi bi-folder-fill me-2"></i>css/</div>
+        <ul>
+          <li><i class="bi bi-filetype-css me-2"></i>bootstrap.css – Main CSS (unminified)</li>
+          <li><i class="bi bi-file-earmark-code me-2"></i>bootstrap.min.css – Minified CSS for faster loading</li>
+          <li><i class="bi bi-filetype-css me-2"></i>bootstrap.rtl.css – For RTL languages like Arabic</li>
+        </ul>
+        <div class="file text-warning"><i class="bi bi-folder-fill me-2"></i>js/</div>
+        <ul>
+          <li><i class="bi bi-filetype-js me-2"></i>bootstrap.bundle.min.js – Includes Bootstrap JS + Popper</li>
+          <li><i class="bi bi-filetype-js me-2"></i>bootstrap.min.js – Bootstrap JS only (Popper separate)</li>
+        </ul>
+        <div class="file text-info"><i class="bi bi-folder-fill me-2"></i>icons/</div>
+        <ul>
+          <li><i class="bi bi-filetype-svg me-2"></i>SVG Icons (used for UI components, optional)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

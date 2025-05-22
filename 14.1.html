@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Visibility</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    background: #f8f9fa;
+  }
+  .box {
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .d-none {
+    transition: all 0.4s ease;
+  }
+  .box-mobile {
+    background-color: #0d6efd;
+  }
+  .box-md {
+    background-color: #198754;
+  }
+  .box-lg {
+    background-color: #ffc107;
+    color: #212529;
+  }
+</style>
+</head>
+<body>
+
+<div class="box box-mobile d-block d-md-none">Visible only on small (mobile) screens</div>
+<div class="box box-md d-none d-md-block d-lg-none">Visible on medium (tablet) screens</div>
+<div class="box box-lg d-none d-lg-flex">Visible on large (desktop) screens</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

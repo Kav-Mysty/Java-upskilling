@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Floating Login Form</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f0f4c3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .login-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+    .login-card button {
+      border-radius: 50px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <form>
+      <h3 class="mb-4 text-center fw-bold text-success">Login</h3>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" />
+        <label for="floatingEmail">Email address</label>
+      </div>
+      <div class="form-floating mb-4">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <button class="btn btn-success w-100" type="submit">Sign In</button>
+    </form>
+  </div>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

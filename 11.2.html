@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Object Layout</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body {
+    background: #e9ecef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+  }
+  .media {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    max-width: 720px;
+    margin: auto;
+  }
+  .media img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 0 12px #0d6efd;
+  }
+  .media-body {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .media-body h5 {
+    font-weight: 700;
+    color: #0d6efd;
+  }
+  .media-body p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="media d-flex align-items-center">
+  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Person Image" />
+  <div class="media-body">
+    <h5>James Wilson</h5>
+    <p>James is a creative UI/UX designer with over 8 years of experience crafting intuitive digital experiences. He enjoys blending minimalistic design with vibrant colors to create stunning interfaces.</p>
+  </div>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

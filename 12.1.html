@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spacing Utilities</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body {
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    padding: 3rem;
+  }
+  .section {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+  }
+  .section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  .heading {
+    margin-bottom: 1rem;
+    color: #3b3f5c;
+    font-weight: 600;
+    text-align: center;
+  }
+  .content {
+    padding: 2rem 3rem;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="section m-3 py-5 px-4">
+    <h2 class="heading">Beautiful Spacing with Bootstrap</h2>
+    <p class="content">
+      This section uses <span class="text-primary fw-bold">m-3</span> for margin around it, giving it breathing room from other elements.<br />
+      The <span class="text-success fw-bold">py-5</span> class adds vertical padding for comfortable top and bottom spacing.<br />
+      The <span class="text-danger fw-bold">px-4</span> adds left and right padding, keeping content neatly inside.<br />
+      Try hovering this box to see a subtle lift effect enhancing its presence.
+    </p>
+  </div>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

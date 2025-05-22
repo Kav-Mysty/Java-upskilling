@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image with Overlay Badge</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .image-wrapper {
+      position: relative;
+      display: inline-block;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .image-wrapper img {
+      display: block;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .badge-overlay {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #dc3545;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="image-wrapper">
+  <img src="https://picsum.photos/id/1018/300/200" alt="Sample Image" />
+  <div class="badge-overlay">New</div>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

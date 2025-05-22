@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Sidebar</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f1f3f5;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: #343a40;
+    color: white;
+    padding: 2rem 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  .sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+  }
+  .sidebar a:hover {
+    background: #495057;
+    color: #fff;
+  }
+  @media (min-width: 768px) {
+    .sidebar {
+      display: flex;
+      transform: translateX(0);
+    }
+  }
+  .content {
+    margin-left: 0;
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+  }
+  @media (min-width: 768px) {
+    .content {
+      margin-left: 220px;
+    }
+  }
+  h1 {
+    color: #212529;
+  }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#">Dashboard</a>
+  <a href="#">Profile</a>
+  <a href="#">Settings</a>
+  <a href="#">Messages</a>
+  <a href="#">Logout</a>
+</div>
+
+<div class="content">
+  <h1>Welcome to your dashboard</h1>
+  <p>This sidebar appears only on tablets and larger screens.</p>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

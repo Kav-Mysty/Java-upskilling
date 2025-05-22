@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap JS Plugins</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #f8f9fa, #e0f7ff);
+    }
+    .centered {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center centered">
+    <h2 class="text-primary mb-4">
+      <i class="bi bi-stars me-2"></i>Bootstrap JS Plugins Demo
+    </h2>
+
+    <button class="btn btn-warning me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to open modal">
+      <i class="bi bi-lightbulb-fill"></i> Tooltip Button
+    </button>
+
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">
+      <i class="bi bi-box-arrow-up-right"></i> Open Modal
+    </button>
+
+    <button class="btn btn-dark mt-3" data-bs-toggle="offcanvas" data-bs-target="#demoCanvas">
+      <i class="bi bi-layout-sidebar-inset-reverse"></i> Open Offcanvas
+    </button>
+  </div>
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Welcome Modal</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          This modal is powered by <strong>bootstrap.bundle.min.js</strong> with Popper.js included!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="demoCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Quick Panel</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>This is an offcanvas component — ideal for sidebars, menus, etc.</p>
+      <p>All of this is made interactive thanks to Bootstrap's JS plugins.</p>
+    </div>
+  </div>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+      new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  </script>
+</body>
+</html>

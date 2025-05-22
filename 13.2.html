@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gradient Dark Background</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #343a40);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    background: linear-gradient(135deg, #212529, #495057);
+    padding: 3rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    max-width: 450px;
+    text-align: center;
+  }
+  h1 {
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1.5px;
+  }
+  p {
+    font-size: 1.1rem;
+    color: #ced4da;
+    margin-bottom: 2rem;
+  }
+  .btn-light {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  .btn-light:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="display-4">Dark Mode Dashboard</h1>
+    <p>Experience the smooth gradient background with crisp white text for elegant readability.</p>
+    <button class="btn btn-light">Get Started</button>
+  </div>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
