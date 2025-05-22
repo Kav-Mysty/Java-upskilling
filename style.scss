@@ -1,15 +1,17 @@
-@import 'variables';
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import "node_modules/bootstrap/scss/bootstrap";
 
 body {
-  background: #fff0f0;
-  color: #333;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 3rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 h1 {
-  color: $primary;
-  font-weight: 800;
-  margin-bottom: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
